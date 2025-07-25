@@ -3,6 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Inter } from 'next/font/google';
 import { ReactNode } from 'react';
 import Loader from './loader';
+import type { Metadata, Viewport } from 'next';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -12,7 +13,7 @@ const inter = Inter({
   preload: true,
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: {
     default: 'Attendly - Smart Attendance Management',
     template: '%s | Attendly'
@@ -28,17 +29,13 @@ export const metadata = {
     telephone: false,
   },
   icons: {
-    icon: [
-      {
-        url: "/favicon.ico",
-        sizes: "32x32",
-        type: "image/x-icon",
-      },
-    ],
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
   },
 };
 
-export const viewport = {
+export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
@@ -53,6 +50,11 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" className={inter.variable} suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/favicon.ico" />
+      </head>
       <body className="antialiased overflow-x-hidden">
         <Loader/>
         {children}
