@@ -28,7 +28,7 @@ export const metadata = {
     telephone: false,
   },
   icons: {
-    icon: "/check.ico"
+    icon: "/favicon.ico"
   },
 };
 
