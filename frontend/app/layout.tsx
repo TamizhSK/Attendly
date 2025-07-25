@@ -28,7 +28,7 @@ export const metadata = {
     telephone: false,
   },
   icons: {
-    icon: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M10 50 L40 90 L90 25' fill='none' stroke='white' stroke-width='20' stroke-linecap='round' stroke-linejoin='round'/></svg>"
+    icon: "/check.ico"
   },
 };
 
