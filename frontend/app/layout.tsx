@@ -28,7 +28,13 @@ export const metadata = {
     telephone: false,
   },
   icons: {
-    icon: "/favicon.ico"
+    icon: [
+      {
+        url: "/favicon.ico",
+        sizes: "32x32",
+        type: "image/x-icon",
+      },
+    ],
   },
 };
 
